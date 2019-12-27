@@ -1,0 +1,331 @@
+@import "AppMainStyles.scss";
+
+.container {
+    display: grid;
+    margin: 30px 25px 0px 25px;
+    padding-bottom: 30px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 20px;
+    column-gap: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+
+    @media (min-width: 525px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 750px) {
+        margin: 40px 25px 0px 25px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media (min-width: 1100px) {
+        margin: 50px 35px 0px 35px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    @media (min-width: 1500px) {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    @media (min-width: 1800px) {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+.jobCategoryDiv {
+    padding: 5px 10px;
+    background-color: $primaryBackgroundColor;
+}
+.jobTitle {
+    font-family: $primaryFont;
+    font-style: bold;
+    font-size: 16px;
+    letter-spacing: .5px;
+    margin: 5px 10px 7px 10px;
+    top: -20px;
+    overflow: scroll;
+    border-bottom: 1px $secondaryBackgroundColor solid;
+    padding-bottom: 7px;
+
+    @media (min-width: 400px) {
+        font-size: 18px;
+    }
+    // @media (min-width: 750px) {    
+        
+    // }
+    // @media (min-width: 1100px) {
+        
+    // }
+    // @media (min-width: 1500px) {
+        
+    // }
+    // @media (min-width: 1800px) {
+         
+    // }
+}
+.jobCompany {
+    font-family: $primaryFont;
+    color: $secondaryAccentColor;
+    margin: 10px 10px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.jobURL {
+    font-family: $primaryFont;
+    font-weight: 500;
+    font-style: oblique;
+    font-size: 13px;
+    text-decoration: none;
+    color: $shadow;
+    margin: 10px 10px;
+
+    &:hover {
+        color: $red;
+        transition: 250ms;
+    }
+}
+.jobLocation {
+    font-family: $primaryFont;
+    margin: 10px 10px 15px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.jobSubTitle {
+    font-family: $primaryFont;
+    font-weight: 600;
+    font-size: 15px;
+    margin: 10px 10px 2px 10px;
+
+    @media (min-width: 400px) {
+        font-size: 16px;
+    }
+}
+.jobDetails {
+    font-family: $primaryFont;
+    margin: 0px 10px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+.jobNotes {
+    font-family: $primaryFont;
+    margin: 0px 10px 10px 15px;
+    font-size: 15px;
+    line-height: 1.4;
+}
+.jobContact {
+    font-family: $primaryFont;
+    margin: 5px 10px;
+    font-size: 15px;
+}
+.jobButton {
+    font-family: $primaryFont;
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 7px;
+    border: none;
+    margin: 0px 15px 15px 15px;
+    background-color: $primaryAccentColor;
+    color: white;
+    box-shadow: $shadow 1px 1px 3px;
+
+    &:hover {
+        background-color: $secondaryAccentColor;
+        transition: 250ms;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+.jobBox {
+    margin: 0;
+    background-color: white !important;
+    padding: 0px 10px 10px;
+    height: auto;
+    border: 5px $primaryBackgroundColor solid;    
+    box-sizing: border-box;
+}
+.card {
+    background-color: white !important;
+}
+.jobTypeButton {
+    font-family: $primaryFont;
+    padding: 5px 10px;
+    display: inline-block;
+    text-align: center;
+    margin: 5px;
+    border-radius: 6px;
+    background-color: $primaryBackgroundCards;
+
+    &:focus {
+        background-color: $primaryAccentColor;
+        color: white;
+        outline: none;
+    }
+}
+.categoryTitle {
+    font-family: $primaryFont;
+    font-style: bold;
+    font-size: 20px;
+    color: $primaryAccentColor;
+    border-top: 4px $red solid;
+    border-left: 4px $red solid;
+    border-right: 4px $red solid;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-image: linear-gradient(white, whitesmoke)
+}
+.toggleParent {
+    position: relative;
+    padding: 0;
+    z-index: 0;
+    background-color: white !important;
+}
+.toggleIcon {
+    position: absolute;
+    width: 15px;
+    height: 20px;
+    left: 90%;
+    top: -30px;
+    font-size: 46px;
+    background-color: rgba(245, 245, 245, 0);
+    color: $secondaryAccentColor;
+    border: none;
+    z-index: 0;
+
+    &:focus {
+        outline: none;
+    }
+}
+.NEW {
+    flex-direction: row;
+    flex-wrap: wrap;
+    order: 0 !important;
+    height: auto;
+}
+.APPLIED {
+    flex-direction: row;
+    flex-wrap: wrap;
+    order: 1 !important;
+}
+.INTERVIEW {
+    flex-direction: row;
+    flex-wrap: wrap;
+    order: 2 !important;
+} 
+.FOLLOW-UP {
+    flex-direction: row;
+    flex-wrap: wrap;
+    order: 3 !important;
+}  
+.OFFER {
+    flex-direction: row;
+    flex-wrap: wrap;
+    order: 4 !important;
+}   
+.FILED {
+    flex-direction: row;
+    flex-wrap: wrap;
+    order: 5 !important;
+}
+.container div:nth-child(n) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    // background-color: $primaryBackgroundColor;
+    padding: 5px 5px 0px;
+    order: 6;
+}
+
+/////////////////////////////////////////////////////////////
+// .NEW {
+//     // display: ;
+//     flex-wrap: wrap;
+//     grid-column: 1/2;
+//     grid-row: 1/2;
+//     padding: 5px 10px;
+// }
+// .APPLIED {
+//     display: block;
+//     grid-column: 1/2;
+//     grid-row: 2/3;
+//     padding: 5px 10px;
+
+//     @media (min-width: 525px) {
+//         grid-column: 2/3;
+//         grid-row: 1/2;
+//     }
+//     // @media (min-width: 750px) {
+//     //     grid-column: 2/3;
+//     // }
+//     // @media (min-width: 1100px) {
+//     //     grid-column: 2/3;
+//     // }
+// }
+// .INTERVIEW {
+//     grid-column: 1/2;
+//     grid-row: 3/4;
+//     padding: 5px 10px;
+
+//     @media (min-width: 525px) {
+//         grid-column: 1/2;
+//         grid-row: 2/3;
+//     }
+//     @media (min-width: 750px) {
+//         grid-column: 3/4;
+//         grid-row: 1/2;
+//     }
+//     // @media (min-width: 1100px) {
+//     //     grid-column: 3/4;
+//     // }
+// }
+// .FOLLOW-UP {
+//     grid-column: 1/2;
+//     grid-row: 4/5;
+//     padding: 5px 10px;
+
+//     @media (min-width: 525px) {
+//         grid-column: 2/3;
+//         grid-row: 2/3;
+//     }
+//     @media (min-width: 750px) {
+//         grid-column: 1/2;
+//         grid-row: 2/3;
+//     }
+//     @media (min-width: 1100px) {
+//         grid-column: 4/5;
+//         grid-row: 1/2;
+//     }
+// }
+// .OFFER {
+//     grid-column: 1/2;
+//     grid-row: 5/6;
+//     padding: 5px 10px;
+
+//     @media (min-width: 525px) {
+//         grid-column: 1/2;
+//         grid-row: 3/4;
+//     }
+//     @media (min-width: 750px) {
+//         grid-column: 2/3;
+//         grid-row: 2/3;
+//     }
+//     @media (min-width: 1100px) {
+//         grid-column: 1/2;
+//         grid-row: 2/3;
+//     }
+// }
+// .FILED {
+//     grid-column: 1/2;
+//     grid-row: 6/7;
+//     padding: 5px 10px;
+
+//     @media (min-width: 525px) {
+//         grid-column: 2/3;
+//         grid-row: 3/4;
+//     }
+//     @media (min-width: 750px) {
+//         grid-column: 3/4;
+//         grid-row: 2/3;
+//     }
+//     @media (min-width: 1100px) {
+//         grid-column: 2/3;
+//         grid-row: 2/3;
+//     }
+// }
