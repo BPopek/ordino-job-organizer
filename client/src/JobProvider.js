@@ -23,7 +23,7 @@ function JobProvider(props) {
     })
 
     const getJobs = () => {
-        console.log('hi')
+        // console.log('hi')
         return jobAxios.get('/api/jobs')
         .then(response => {
             // console.log(response)
