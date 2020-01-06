@@ -9,7 +9,8 @@ function JobList() {
     const [ toggled, setToggled ] = useState(true)
 
     useEffect(() => {
-      if(!jobs.length){
+      // if(!jobs.length){
+      if(jobs.length >= 0){
         getJobs()
       }
     }, [getJobs, jobs])
