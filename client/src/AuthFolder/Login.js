@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { JobContext } from '../JobProvider';
 import ordinoG from '../Images/ordino-green.png';
+import { Link } from 'react-router-dom';
 
 function LoginForm(props)  {
     const { login } = useContext(JobContext)
@@ -41,6 +42,7 @@ function LoginForm(props)  {
         <div className='formDiv'>
             <form onSubmit={handleSubmit} className='formMain'>
                 <img src={ordinoG} className='formLogo' alt='logo'/>
+                <h3 className='intro'>Job Application Organizer</h3>
                 <h2 className='formHeader'>Please Log In</h2>
                 <input
                     onChange={handleChange}
@@ -58,7 +60,10 @@ function LoginForm(props)  {
                     placeholder='Password' 
                     className='formInput'
                     />
-                <button type='submit' className='colorButton'>Submit</button>
+                <button type='submit' className='colorButton'>Log In</button>
+                <h3 className='signUpIntro'>New User?</h3>
+                <Link to='/signup' className='signUpLink'>Create Account Here</Link>
+
             </form>
             {
                 (errorMessage) && 

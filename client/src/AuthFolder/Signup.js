@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { JobContext } from '../JobProvider';
 import ordinoG from '../Images/ordino-green.png';
+import { Link } from 'react-router-dom';
 
 function Signup(props)  {
     const { signup } = useContext(JobContext)
@@ -61,6 +62,8 @@ function Signup(props)  {
                     />
 
                 <button type='submit' className='colorButton'>Create Account</button>
+                <h3 className='signUpIntro'>Already on Ordino?</h3>
+                <Link to='/login' className='signUpLink'>Click Here to Log In</Link>
             </form>
             {
                 (errorMessage) && 

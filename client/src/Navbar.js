@@ -13,7 +13,7 @@ function Navbar(props){
                 <>
                     <div className='navLink'>
                     <img src={ordino} className='navLogo' alt='logo'/>
-                        <Link to='/signup' className='navLink'>Sign Up</Link>
+                        {/* <Link to='/signup' className='navLink'>Sign Up</Link> */}
                     </div>
                     <div className='navLink'>
                         <Link to='/login' className='navLink'>Log In</Link>
