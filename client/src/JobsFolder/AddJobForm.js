@@ -56,32 +56,36 @@ function AddJobForm(props) {
         e.preventDefault();
        
         if (props.type === 'add'){
-            handleCustomCategory(e)
+            // handleCustomCategory(e)
             addJob(jobInfo)
                 .then(() => {
                     clearInputs();
+                    props.toggle()
                 })
                 .catch(err => console.error(err.response.data.message))
         } else {
-            handleCustomCategory(e)
+            // handleCustomCategory(e)
             editJob(props.job._id, jobInfo)
+                .then(() => {
+                    props.toggle()
+                })
                 .catch(err => console.error(err.response.data.message))
         }
-        props.toggle()
+        // props.toggle()
     }
 
-    const handleCustomCategory = (e) => {
-        const { value } = e.target;
-        setJobInfo(prevJob => {
-            const checkCustomName = new Set([...prevJob.customCategory, ...prevJob.category, value])
-            const newCustom = [...checkCustomName]
-            return {
-                ...prevJob,
-                customCategory: newCustom
-            }
-        })
-        console.log(jobInfo)
-    }
+    // const handleCustomCategory = (e) => {
+    //     const { value } = e.target;
+    //     setJobInfo(prevJob => {
+    //         const checkCustomName = new Set([...prevJob.customCategory, ...prevJob.category, value])
+    //         const newCustom = [...checkCustomName]
+    //         return {
+    //             ...prevJob,
+    //             customCategory: newCustom
+    //         }
+    //     })
+    //     console.log(jobInfo)
+    // }
 
     const toggledCustom = (e) => {
         setToggled(prev => {

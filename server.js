@@ -9,11 +9,11 @@ const path = require('path')
 
 app.use(morgan('dev'));
 app.use(express.json());
-app.use('/api', expressJwt({ secret: process.env.SECRET }));
 app.use(express.static(path.join(__dirname, "client", "build")))
 
 // mongoose.set('useCreateIndex', true);
-mongoose.connect('mongodb://localhost:27017/jobs', 
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/todos",
     { 
         useNewUrlParser: true, 
         useUnifiedTopology: true, 
@@ -25,9 +25,9 @@ mongoose.connect('mongodb://localhost:27017/jobs',
         console.log("Connected to the database");
     }
 );
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/todos");
 
 app.use('/auth', require("./routes/auth"));
+app.use('/api', expressJwt({ secret: process.env.SECRET }));
 app.use('/api/jobs', require('./routes/jobRoute'));
 
 app.use((err, req, res, next) => {

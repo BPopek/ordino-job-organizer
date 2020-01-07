@@ -1,18 +1,12 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Job from './Job';
 import AddJobForm from './AddJobForm';
 import { JobContext } from '../JobProvider';
 
 function JobList() {
-    const { addJob, jobs, getJobs } = useContext(JobContext)
+    const { addJob, jobs } = useContext(JobContext)
 
     const [ toggled, setToggled ] = useState(true)
-
-    useEffect(() => {
-      if(!jobs.length){
-        getJobs()
-      }
-    }, [getJobs, jobs])
 
     const toggle = () => {
         setToggled(prev => {

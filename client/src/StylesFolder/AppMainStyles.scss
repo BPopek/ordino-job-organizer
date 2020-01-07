@@ -19,7 +19,7 @@ $red: #FA5732;
     padding: 0;
 }
 .appDiv {
-    background-color: #dedede;
+    background-color: #c0c0c0;
     box-sizing: border-box;
     height: 140vh;
 }
@@ -171,6 +171,7 @@ input[type=url] {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    background-color: #c0c0c0;
 }
 .formMain {
     margin: 100px auto 0px;
@@ -179,7 +180,7 @@ input[type=url] {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: $primaryBackgroundColor; 
+    background-color: #e6e4e4; 
     box-shadow: $shadow 5px 5px 10px;
 
     @media (min-width: 400px) {
@@ -256,7 +257,7 @@ input[type=url] {
 .jobSubmitForm {
     margin: 50px auto 0px;
     width: 250px;
-    background-color: $secondaryBackgroundColor;
+    background-color: #e6e4e4;
     padding: 15px;
     text-align: center;
     display: flex;

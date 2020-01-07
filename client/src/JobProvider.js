@@ -90,6 +90,7 @@ function JobProvider(props) {
             setUserState(prevState => ({
                 ...prevState, user, token
             }));
+            getJobs()
             return response;
         }) 
     }
