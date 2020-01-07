@@ -179,7 +179,7 @@ input[type=url] {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: $primaryBackgroundColor; 
+    background-color: $secondaryBackgroundColor; 
     box-shadow: $shadow 5px 5px 10px;
 
     @media (min-width: 400px) {
