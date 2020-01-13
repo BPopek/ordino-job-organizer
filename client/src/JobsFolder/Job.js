@@ -40,8 +40,6 @@ function Job(props) {
                             <div className='toggleParent'>
                                 <button className='toggleIcon' onClick={() => toggleData()}> ⊷ </button>
                             </div>
-                            <h3 className='jobTitle'>{props.title}</h3>
-                            <a href={`${props.url}`} className='jobURL'>{!props.url ? null : 'Job Posting Link'}</a>
                             {   props.company ?
                                 <>
                             <p className='jobCompany'>{props.company}</p>
@@ -49,6 +47,8 @@ function Job(props) {
                                 :
                                 <></>
                             }
+                            <h3 className='jobTitle'>{props.title}</h3>
+                            <a href={`${props.url}`} className='jobURL'>{!props.url ? null : 'Job Posting Link'}</a>
                             <h4 className='jobLocation'>{props.location}</h4>
                             {   props.details ?
                                 <>
