@@ -15,7 +15,7 @@ function JobProvider(props) {
     const [ jobs, setJobs ] = useState([])
 
     // const [ user, setUser ] = useState( JSON.parse(localStorage.getItem('user')) || {} )
-    // const [ token, setToken ] = useState( localStorage.getItem('token') || '')
+    // const [ token, setToken ] = useState( localStorage.getItem('token') || '') testing
     
     const [ userState, setUserState ] = useState({
         user: JSON.parse(localStorage.getItem('user')) || {},
