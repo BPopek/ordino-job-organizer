@@ -32,7 +32,7 @@ function Job(props) {
                             </div>
                             <h3 className='jobTitle'>{props.title}</h3>
                             <p className='jobCompany'>{props.company}</p>
-                            <a href={`${props.url}`} className='jobURL'>{!props.url ? null : 'Job Posting Link'}</a>
+                            <a href={`${props.url}`} className='jobURL' target='blank'>{!props.url ? null : 'Job Posting Link'}</a>
                             <h4 className='jobLocation'>{props.location}</h4>
                         </div>
                         :
@@ -48,7 +48,7 @@ function Job(props) {
                                 :
                                 <></>
                             }
-                            <a href={`${props.url}`} className='jobURL'>{!props.url ? null : 'Job Posting Link'}</a>
+                            <a href={`${props.url}`} className='jobURL' target='blank'>{!props.url ? null : 'Job Posting Link'}</a>
                             <h4 className='jobLocation'>{props.location}</h4>
                             {   props.details ?
                                 <>
