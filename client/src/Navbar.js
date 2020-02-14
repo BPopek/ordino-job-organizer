@@ -14,7 +14,7 @@ function Navbar(props){
                     <div className='navLink'>
                     {/* <img src={ordino} className='navLogo' alt='logo'/> */}
                         {/* <Link to='/signup' className='navLink'>Sign Up</Link> */}
-                    <Link exact to='/' >
+                    <Link exact to='/jobs' >
                         <img src={ordino} alt='Ordino Logo' className='navLogo' />
                     </Link>
                         
