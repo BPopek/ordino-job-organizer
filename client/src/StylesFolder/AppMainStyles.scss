@@ -71,6 +71,21 @@ html {
         top: 7.5px;    
     }
 }
+.loginPortfolio {
+    font-family: $primaryFont;
+    font-size: 13px;
+    font-weight: 600;
+    font-style: italic;
+    text-decoration: none;
+    color: $secondaryAccentColor;
+    margin: 15px 0px 0px;
+    letter-spacing: .4px;
+
+    @media (min-width: 400px) {
+        font-size: 15px;
+        margin: 20px 0px 0px;
+    }
+}
 .signUpIntro {
     font-family: $primaryFont;
     font-size: 13px;

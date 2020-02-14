@@ -63,6 +63,7 @@ function LoginForm(props)  {
                 <button type='submit' className='colorButton'>Log In</button>
                 <h3 className='signUpIntro'>New User?</h3>
                 <Link to='/signup' className='signUpLink'>Create Account Here</Link>
+                <h3 className='loginPortfolio'>TEST ACCOUNT LOGIN INFORMATION <br />IS AVAILABLE ON MY PORTFOLIO</h3>
 
             </form>
             {
