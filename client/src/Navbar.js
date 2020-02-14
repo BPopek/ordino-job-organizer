@@ -12,8 +12,12 @@ function Navbar(props){
                 !token ? 
                 <>
                     <div className='navLink'>
-                    <img src={ordino} className='navLogo' alt='logo'/>
+                    {/* <img src={ordino} className='navLogo' alt='logo'/> */}
                         {/* <Link to='/signup' className='navLink'>Sign Up</Link> */}
+                    <Link exact to='/' >
+                        <img src={ordino} alt='Ordino Logo' className='navLogo' />
+                    </Link>
+                        
                     </div>
                     <div className='navLink'>
                         <Link to='/login' className='navLink'>Log In</Link>
