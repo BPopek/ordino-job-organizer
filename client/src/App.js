@@ -21,9 +21,10 @@ function App() {
         <Route path='/signup' render={() => token ? <Redirect to='/jobs'/> : <Signup />}/>
         <Route path='/login' render={() => token ? <Redirect to='/jobs'/> : <Login />}/> 
         <ProtectedRoute path='/jobs' component={JobList}></ProtectedRoute>
-        {/* <Route exact path='/' render={() => <Redirect to='/login'/>}/> */}
-        <Route exact path='/' component={Login}/>
+        <Route exact path='/' render={() => <Redirect to='/login'/>}/>
 
+        {/* <Route exact path='/' component={Login}/> */}
+        
       </Switch>
     </div>
   );
