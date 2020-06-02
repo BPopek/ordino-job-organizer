@@ -4,10 +4,19 @@ import AddJobForm from './AddJobForm';
 import { JobContext } from '../JobProvider';
 
 function JobList() {
-    const { addJob, jobs } = useContext(JobContext)
+    const { addJob, jobs, getJobs } = useContext(JobContext)
+
+  //   useEffect(() => {
+  //     if(type === 'update'){
+  //         setJobInfo(job)
+  //     }
+  // }, [type, job])
+
+  useEffect(() => {
+    getJobs()
+}, [])
 
     const [ toggled, setToggled ] = useState(true)
-
     const toggle = () => {
         setToggled(prev => {
             console.log(prev)
