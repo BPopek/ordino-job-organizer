@@ -50,8 +50,8 @@ function JobList() {
           {cat[0]}
           {cat.slice(1)}
         </div>
-      )
-    })
+        )
+      })
     // console.log(props.children)
 
     return (
