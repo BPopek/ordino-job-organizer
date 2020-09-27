@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, "client", "build")))
 
 // mongoose.set('useCreateIndex', true);
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/todos",
+mongoose.connect(process.env.DB_URI || "mongodb://localhost:27017/todos",
     { 
         useNewUrlParser: true, 
         useUnifiedTopology: true, 
