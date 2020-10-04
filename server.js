@@ -27,7 +27,7 @@ mongoose.connect(process.env.DB_URI || "mongodb://localhost:27017/todos",
 );
 
 app.use('/auth', require("./routes/auth"));
-app.use('/api', expressJwt({ secret: process.env.SECRET, algorithms: ['RS256'] }));
+app.use('/api', expressJwt({ secret: process.env.SECRET, algorithms: ['sha1', 'RS256', 'HS256'] }));
 app.use('/api/jobs', require('./routes/jobRoute'));
 
 app.use((err, req, res, next) => {
